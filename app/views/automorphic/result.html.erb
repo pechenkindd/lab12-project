@@ -1,0 +1,21 @@
+<% if current_user.present? %>
+	<h1>Результат</h1>
+	<table>
+		<tr>
+			<th>Число</th>
+			<th>Квадрат числа</th>
+		</tr>
+		<% @numbers.each do |number| %>
+			<tr>
+				<td><%= number %></td>
+				<td><%= number ** 2 %></td>
+			</tr>
+		<% end %>
+	</table>
+<br/>
+<%= link_to "Повторить ввод числа", automorphic_input_path %>
+<% else %>
+	<p>Сначала авторизируйтесь</p> 
+<% end %>
+<br/>
+<p><%= link_to 'Вернуться на главную', root_path %></p>

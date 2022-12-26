@@ -1,2 +1,20 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1>Авторизация</h1>
+<p>Введите логин и пароль</p>
+
+<%= form_with scope: :session, url: session_path, data: {turbo: false} do |form| %>
+	<div>
+    <%= form.label :login, style: "display: block" %>
+    <%= form.text_field :login %>
+  </div>
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div><br/>
+	<div>
+    <%= form.submit "Войти" %>
+  </div>
+<% end %>
+<br/>
+<div>
+  <%= link_to "Вернуться на главную", root_path %>
+</div>
