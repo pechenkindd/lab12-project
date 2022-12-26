@@ -2,6 +2,7 @@
 	<h1><%= "Здравствуйте, #{current_user.login}" %></h1>
 
 	<p><%= link_to "К задаче", automorphic_input_path %></p>
+	<p><%= link_to "Список пользователей", users_path %></p>
 
 	<p><%= button_to "Выйти из аккаунта", session_path, method: :delete %></p>
 <% else %>
