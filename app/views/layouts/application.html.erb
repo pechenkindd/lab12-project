@@ -12,9 +12,9 @@
 
   <body>
     <% if flash[:notice].present? %>
-      <p class="flash-nt"><%= flash[:notice] %></p>
+      <p id="flash-nt"><%= flash[:notice] %></p>
     <% elsif flash[:alert].present? %>
-      <p class="flash-al"><%= flash[:alert] %></p>
+      <p id="flash-al"><%= flash[:alert] %></p>
     <% end %>
     <%= yield %>
   </body>

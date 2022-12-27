@@ -36,5 +36,5 @@ class User < ApplicationRecord
 			message: "Пароли не совпадают"
 		}
   }
-
+	
 end
